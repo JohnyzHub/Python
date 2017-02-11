@@ -40,12 +40,13 @@ class Rectangle:
         hasWidth = hasattr(self, "width")
         if hasattr(self, "height") and hasattr(self, "width"):
             try:
-                area =  int(self.__height)*int(self.__width)
+                area = int(self.__height) * int(self.__width)
             except RuntimeError as error:
                 print("Unable to get area: ".format(error))
             return area
         else:
-            print("Some or all required attributes not available height:{} and width:{}".format(str(hasHeight), str(hasWidth)))
+            print("Some or all required attributes not available height:{} and width:{}".format(str(hasHeight),
+                                                                                                str(hasWidth)))
 
 
 def main():

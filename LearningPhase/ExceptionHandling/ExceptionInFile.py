@@ -1,10 +1,14 @@
+#from ExceptionHandling import MyCustomException
+#import ExceptionHandling.MyCustomException
+
 
 def handle_except():
+
     myFile = "C:\Python-Utils\SampleFile.txt"
     try:
         data = open(myFile)
-    except:
-        print("File not Found")
+    except Exception as e:
+        print("File not Found. Exception - {} :::: {} ".format(type(e).__name__, e))
         return
 
     for each_line in data:

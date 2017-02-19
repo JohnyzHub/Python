@@ -3,13 +3,13 @@ import os
 
 def reading_file():
     print(os.getcwd())
-    if os.path.exists('LearningPhase/Text File.txt'):
+    if os.path.exists('Text-File.txt'):
         print("File found")
     else:
         print("File not found")
         return
 
-    data = open('LearningPhase/Text File.txt')
+    data = open('Text-File.txt')
     for each_line in data:
         print(each_line, end='')
     data.close()
@@ -43,7 +43,6 @@ def reading_file():
         master_file = open("MasterFile.txt", "w")
         student_file = open("StudentFile.txt", "w")
         print(master, file=master_file)
-        test_file = open("test_file.txt")
         print(student, file=student_file)
     except IOError:
         print("")
@@ -51,7 +50,6 @@ def reading_file():
     finally:
         master_file.close()
         student_file.close()
-        test_file.close()
 
 
 reading_file()
